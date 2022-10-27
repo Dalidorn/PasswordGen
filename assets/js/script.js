@@ -36,7 +36,7 @@ function generatePassword() {
   };
 
   // testing if amount is within parameters, and using !parseInt to catch if it's not a number.
-  if(amount < 8 || amount > 128 || !parseInt(amount, 10)) {
+  if(amount < 8 || amount > 128 || isNaN(amount)) {
     alert("Please enter only a number between 8 and 128");
     return generatePassword();
   };
